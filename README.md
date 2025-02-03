@@ -35,7 +35,11 @@ The **Customized Shoe Collection Web Application** is a web-based platform that 
 ### SHOE DETAILS
 ![Screenshot (81)](https://github.com/user-attachments/assets/9eeb9769-0251-4c93-b235-dcd47583db2a)
 
-### CONTACT
+### DESIGN BY CUSTOMER
 ![Screenshot (82)](https://github.com/user-attachments/assets/d44dd4b9-0996-4d8c-8a4d-f1e86e4b7550)
 
-  
+### ORDER CONFIRMATION
+![Screenshot (83)](https://github.com/user-attachments/assets/75584928-fda4-4bf0-88d4-6117bb06d46b)
+
+### CONTACT
+![Screenshot (84)](https://github.com/user-attachments/assets/bd4ff737-7402-4255-af1f-85f3c617de15)
