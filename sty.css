@@ -1,0 +1,98 @@
+/* Header Styling */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    margin-top: 0%;
+    padding: 1.5rem 5rem;
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navbar Styling */
+.header .navibar {
+    display: flex;
+    justify-content: space-between; /* Ensures content is distributed between left and right */
+    align-items: center;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    background: white;
+    position: fixed;
+    height: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem 5rem;
+    background: linear-gradient(to right, #f2ecf0, #838284);
+    
+}
+
+/* Left side links styling */
+.header .nav-left {
+    display: flex;
+    align-items: center;
+    
+}
+
+/* Styling for navigation links */
+.header .navibar a {
+    font-size: 1.5rem;
+    color: #080c0a;
+    margin-left: 0.5rem;
+    padding: 1.5rem;
+    text-decoration: none;
+    font-size: 30px;
+    margin-top: 0%;
+}
+
+/* Hover effect for navigation links */
+.header .navibar a:hover {
+    color: #3d3d3c35;
+    text-decoration: underline;
+}
+
+/* Cart Icon Styling (Right side) */
+.header .cart {
+    margin-left: auto; /* Pushes the cart icon to the right */
+}
+
+.header .cart a {
+    font-size: 2.5rem;
+    color: #080c0a;
+    text-decoration: none;
+}
+
+.header .cart a i {
+    font-size: 2rem; /* Size of the shopping cart icon */
+}
+
+/* Hover effect for cart */
+.header .cart a:hover {
+    color: #3d3d3c35;
+    text-decoration: none; /* No underline for cart icon */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header .navibar {
+        flex-direction: column; /* Stacks content vertically on smaller screens */
+        padding: 1rem;
+    }
+
+    .header .nav-left {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .navibar a {
+        font-size: 2rem;
+    }
+
+    .header .cart a i {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design By You</title>
+    <link rel="stylesheet" href="./designByYou.css">
+</head>
+<body>
+    <section class="designBy" id="designBy">
+        <h1 class="heading">Design By You</h1>
+            <div class="container">
+                <div class="right">
+                    <form id="shoe-form"  method="post" action="order.php">
+                        <table>
+                            <tr>
+                                <td><label for="category">Category:</label></td>
+                                <td>
+                                    <input type="radio" id="men" name="category" value="Men">
+                                    <label for="men">Men</label>
+                                    <input type="radio" id="women" name="category" value="Women">
+                                    <label for="women">Women</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="color">Color:</label></td>
+                                <td>
+                                    <select id="color" name="color">
+                                        <option value="Red">Red</option>
+                                        <option value="Blue">Blue</option>
+                                        <option value="Gray">Gray</option>
+                                        <option value="Black">Black</option>
+                                        <option value="White">White</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="height">Foot Height (cm):</label></td>
+                                <td><input type="text" id="height" name="height" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="width">Foot Width (cm):</label></td>
+                                <td><input type="text" id="width" name="width" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="material">Material:</label></td>
+                                <td>
+                                    <select id="material" name="material">
+                                        <option value="Leather">Leather</option>
+                                        <option value="Canvas">Canvas</option>
+                                        <option value="Suede">Suede</option>
+                                        <option value="Synthetic">Synthetic</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="quantity">Quantity :</label></td>
+                                <td><input type="number" name="quantity" id="quantity"></td>
+                            </tr>
+                        </table>
+                            <button type="submit" class="btnCustom">Order Now</button>
+                            
+                    </form>
+                </div>
+            </div>
+    </section>
+</body>
+</html>

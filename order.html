@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="./order.css">
+</head>
+<body>
+    <section class="order-confirmation">
+        <h1 class="heading">Order Confirmation</h1>
+        <div class="order-details">
+            <h1>Thank you for customizing your shoes!</h1>
+            <p>Your order has been placed successfully.</p>
+            <ul>
+                <li><strong>Category:</strong> <span id="order-category"></span></li>
+                <li><strong>Color:</strong> <span id="order-color"></span></li>
+                <li><strong>Foot Height:</strong> <span id="order-height"></span> cm</li>
+                <li><strong>Foot Width:</strong> <span id="order-width"></span> cm</li>
+                <li><strong>Material:</strong> <span id="order-material"></span></li>
+                <li><strong>Quantity:</strong> <span id="order-quantity"></span></li>
+            </ul>
+            <a href="./home.html" class="back-home-btn">Back to Home</a>
+        </div>
+    </section>
+
+    <script>
+        // Get form data from URL parameters and display in the confirmation
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('order-category').textContent = urlParams.get('category');
+        document.getElementById('order-color').textContent = urlParams.get('color');
+        document.getElementById('order-height').textContent = urlParams.get('height');
+        document.getElementById('order-width').textContent = urlParams.get('width');
+        document.getElementById('order-material').textContent = urlParams.get('material');
+        document.getElementById('order-quantity').textContent = urlParams.get('quantity');
+    </script>
+</body>
+</html>

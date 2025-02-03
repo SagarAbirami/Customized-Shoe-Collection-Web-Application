@@ -1,0 +1,127 @@
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding: 2rem 8%;
+    margin-bottom: 4rem;
+   
+}
+
+body{
+    height:auto;
+    background-color: #f7f7f7;
+    color: #333;
+   
+   
+}
+
+
+.designBy{
+    width: auto;
+    padding: 0%;
+    padding-top:0%;
+    padding-left: 0;
+}
+
+.designBy .heading {
+    font-size: 40px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #f2ecf0 , #838284);
+    text-transform: uppercase;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 100%;
+    margin: auto;
+    font-size: 25px;
+    
+}
+
+
+.right{
+    flex: 1;
+    padding: 10px;
+    max-width: 60%;
+    height: 470px;
+    flex: 1 1 2rem;
+    border: 3px solid #9c999f;
+    border-radius: 20px;
+    box-shadow: 0 0 8px #8c8a8d;
+    margin-top: 0%;
+    margin-left: 18%;
+    margin-bottom: 1%;
+
+   /* margin-top: 0%;
+    margin-right: 50%;
+    margin-left: 25%;
+    padding-right: 50%;
+    padding-left: 10px;*/
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    
+}
+
+td {
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+select, input[type="number"], input[type="text"]{
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+    border: 1px solid #9e9c9c;
+    border-radius: 5px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+#height,#width{
+    background-color: hsla(0, 0%, 99%, 0.906)  ;
+    font-size: 20px;
+
+}
+#color,#material,#quantity{
+    font-size: 20px;
+}
+
+.btnCustom{
+    display: inline-block;
+    width: 30%;
+    padding: 1rem 3rem;
+    background-color: #848485;
+    color: #050404;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 5px;
+    margin-top: 3.5rem;
+    margin-left: 65%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  
+}
+
+.btnCustom:hover{
+    background: #a2a3a3;
+}

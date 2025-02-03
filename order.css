@@ -1,0 +1,92 @@
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding: 2rem 8%;
+    margin-bottom: 4rem;
+   
+}
+
+
+body {
+   
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.order-confirmation {
+    margin-top:0% ;
+    margin-bottom: 0%;
+    text-align: center;
+    padding: 35px 0;
+    width: auto;
+}
+
+.order-confirmation .heading {
+    font-size: 40px;
+    margin-top: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #f2ecf0 , #838284);
+    text-transform: uppercase;
+}
+
+.order-details {
+    background-color: rgb(232, 229, 229);
+    border-radius: 10px;
+    padding: .5rem;
+    max-width: 700px;
+    height: 450px;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-details h1{
+    font-size:2.5rem;
+    color: #0f0d0d;
+}
+
+.order-details p{
+    font-size:2.5rem;
+    color: #515050;
+}
+.order-details ul {
+    list-style: none;
+    padding: 0;
+    text-align:center;
+}
+
+.order-details li {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    text-align:center;
+}
+
+#order-category,#order-color,#order-height,#order-width,#order-material,#order-quantity{
+    font-style: italic;
+    font-size: 2.5rem;
+}
+.back-home-btn {
+    display:block;
+    gap: .7rem;
+    align-items: center;
+    margin-top: 5rem;
+    margin-left: 25rem;
+    padding: .5rem 3rem;
+    border-radius: 5rem;
+    text-decoration: none;
+    background: #cfd6d3;
+    color: #161212;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 25%;
+}
+
+.back-home-btn:hover {
+    background-color: #a2a2a2;
+}

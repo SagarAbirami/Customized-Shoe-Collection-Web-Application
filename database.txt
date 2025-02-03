@@ -1,0 +1,123 @@
+To store form values such as name, email, and phone number into a database from a web page, follow these steps:
+
+Create the HTML Form: This will allow users to input their data.
+Create a PHP Script to Process the Form: This script will handle the form submission, sanitize the data, and insert it into the database.
+Set Up the Database: Create a database and table to store the form data.
+Here’s a step-by-step guide:
+
+1. Create the HTML Form
+Create an HTML file (form.html) with fields for name, email, and phone number. This form will submit data to a PHP script.
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Form</title>
+</head>
+<body>
+    <h1>Contact Form</h1>
+    <form action="submit.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+2. Create the PHP Script to Process the Form
+Create a PHP file (submit.php) that will handle the form submission, sanitize the input data, and insert it into the database.
+
+php
+Copy code
+<?php
+// Database connection details
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "contact_db";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Check if form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve and sanitize form data
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $phone = htmlspecialchars($_POST['phone']);
+
+    // Prepare and bind
+    $stmt = $conn->prepare("INSERT INTO contacts (name, email, phone) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $name, $email, $phone); // "sss" specifies the types of the variables
+
+    // Execute the statement
+    if ($stmt->execute()) {
+        echo "New record created successfully!";
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+
+    // Close the statement
+    $stmt->close();
+}
+
+// Close the connection
+$conn->close();
+?>
+3. Set Up the Database
+Create a database and table to store the form data. Here’s how you can do it with SQL:
+
+sql
+Copy code
+CREATE DATABASE contact_db;
+
+USE contact_db;
+
+CREATE TABLE contacts (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    phone VARCHAR(15) NOT NULL
+);
+Explanation
+HTML Form:
+
+The form uses the POST method to submit data to submit.php.
+The pattern attribute in the phone input field ensures that the phone number is 10 digits long.
+PHP Script (submit.php):
+
+Database Connection: Establishes a connection to the MySQL database using mysqli.
+Sanitizing Input: Uses htmlspecialchars() to prevent XSS attacks.
+Prepared Statements: Uses prepare() and bind_param() to safely insert data into the database and prevent SQL injection.
+Error Handling: Checks for errors in executing the SQL statement and outputs appropriate messages.
+Close Connections: Closes the prepared statement and the database connection.
+Database Setup:
+
+Creates a database (contact_db) and a table (contacts) with columns for name, email, and phone.
+Summary
+Form Submission: Users submit their data through the HTML form.
+Data Processing: PHP script handles form submission, sanitizes the input, and inserts it into the database.
+Database: Stores the submitted data in a structured format.
+This setup allows you to collect user data through a web form and securely store it in a MySQL database.
+
+
+
+
+
+
+
+

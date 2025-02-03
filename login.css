@@ -1,0 +1,125 @@
+*{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding: 2rem 8%;
+   
+}
+
+body{
+    height: auto;
+}
+
+
+
+#login_form{
+    width: 100%;
+    height: 100vh;
+    margin-top: 0%;
+    padding-top: .5%;
+    display:block ;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(./Images/image/loging_bg.png);
+    background-size: cover;
+    background-position: center;
+    border: none;
+}
+
+
+#login_form .heading{
+
+    font-size: 40px;
+    margin-top: 0%;
+    margin-bottom: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #f2ecf0 , #838284);
+    text-transform: uppercase;
+}
+
+#login_form .left{
+    position: relative;
+    top: -50px;
+    left: -60px;
+    padding: 50px 80px;
+    margin-left: 10%;
+}
+
+#login_form .left p{
+    margin-bottom: 5px;
+    font-size: 3.5rem;
+}
+
+.login_form .left .user,.password{
+    border: 2px solid #01010b;
+    border-radius: 5px;
+    width: 500px;
+    height: 5rem;
+    display: flex;
+}
+
+.login_form .left .user .username{
+    position: relative;
+    left: 5%;
+    width: auto;
+    background: none;
+    outline: none;
+    border: none;
+    display: flex;
+    font-size: 2.3rem;
+}
+
+.login_form .left .passworg_tag{
+    margin: 15px 0 5px 0;
+    font-size: 3rem;
+}
+
+.login_form .left .password input{
+    position: relative;
+    left: 5%;
+    width: 295px;
+    background: none;
+    border: none;
+    outline: none;
+    display: flex;
+    font-size: 2.3rem;
+}
+
+::-webkit-input-placeholder{
+    color: black;
+    opacity: 0.7;
+}
+
+.btnLogin{
+    display:block;
+    gap: .7rem;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 25rem;
+    padding: .9rem 3rem;
+    border-radius: 5rem;
+    background: #cfd6d3;
+    color: #161212;
+    font-size: 20px;
+    cursor: pointer;
+    width: 20%;
+}
+
+.btnLogin:hover{
+    background: #a2a3a3;
+}
